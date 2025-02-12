@@ -503,60 +503,46 @@
     /* ====================================================
        SECCIÓN: CONTACTO
     ==================================================== */
-  /* Sección de contacto */
-#contact {
-  background: #fff;
-  padding: 60px 20px;
-}
-
-/* Contenedor centralizado */
-.contact-container {
-  max-width: 1000px;
-  margin: 0 auto;
-}
-
-/* Formulario de contacto con espaciado entre elementos */
-.contact-form {
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-}
-
-/* Estilos para inputs y textarea */
-.contact-form input,
-.contact-form textarea {
-  width: 100%;
-  padding: 1rem 1.5rem;
-  border: 2px solid #ddd;
-  border-radius: 8px;
-  font-size: 1rem;
-  transition: border-color 0.3s ease;
-}
-
-/* Enfoque para inputs y textarea */
-.contact-form input:focus,
-.contact-form textarea:focus {
-  border-color: #ff6f61;
-  outline: none;
-}
-
-/* Botón de envío */
-.contact-form button {
-  padding: 1rem 2rem;
-  background: #ff6f61;
-  border: none;
-  color: #fff;
-  font-size: 1.2rem;
-  border-radius: 25px;
-  cursor: pointer;
-  transition: background 0.5s ease;
-}
-
-/* Hover para el botón */
-.contact-form button:hover {
-  background: #e85550;
-}
-
+     #contact {
+      background: #fff;
+      padding: 60px 20px;
+    }
+    .contact-container {
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+    }
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 1rem 1.5rem;
+      border: 2px solid #ddd;
+      border-radius: 8px;
+      font-size: 1rem;
+      transition: border-color 0.3s ease;
+    }
+    .contact-form input:focus,
+    .contact-form textarea:focus {
+      border-color: #ff6f61;
+      outline: none;
+    }
+    .contact-form button {
+      padding: 1rem 2rem;
+      background: #ff6f61;
+      border: none;
+      color: #fff;
+      font-size: 1.2rem;
+      border-radius: 25px;
+      cursor: pointer;
+      transition: background 0.5s ease;
+    }
+    .contact-form button:hover {
+      background: #e85550;
+    }
     /* ====================================================
        FOOTER
     ==================================================== */
@@ -788,24 +774,28 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <!-- Contenedor principal -->
-    <main class="container">
-      <h1>¡Contáctanos por WhatsApp!</h1>
-      <p>Si deseas más información o Tenes alguna duda, haz clic en el botón de abajo para enviarme un mensaje por WhatsApp.</p>
+   <!-- SECCIÓN: CONTACTO -->
+  <section id="contact">
+    <h2 class="section-title reveal">Contáctanos</h2>
+    <div class="contact-container">
+      <form class="contact-form" action="https://formsubmit.co/aguerosociedades@gmail.com" method="POST">
+        <input type="text" name="nombre" placeholder="Nombre" required>
+        <input type="email" name="email" placeholder="Correo electrónico" required>
+        <textarea name="mensaje" placeholder="Mensaje" rows="5" required></textarea>
+        <button type="submit">Enviar</button>
+        <input type="hidden" name="_next" value="http://127.0.0.1:5501/index.html"> 
+        <input type="hidden" name="_captcha" value="false">
+      </form>
       <!-- Botón de WhatsApp -->
-      <!-- Sustituye "5491128319760" por tu número real de WhatsApp.
-           Sustituye "%20" por espacios y cambia el texto a gusto. -->
-      <a 
-        href="https://wa.me/5491128319760?text=Hola%2C%20quiero%20hacer%20una%20consulta%20sobre%20..."
-        class="btn-whatsapp"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-      WhatsApp 11 2831-9760
-      </a>
-    </main>
-  </body>
-  </html>
+      <div style="text-align: center; margin-top: 30px;">
+        <a href="https://wa.me/5491128319760?text=Hola%2C%20quiero%20hacer%20una%20consulta%20sobre%20..." 
+           class="btn-whatsapp" target="_blank" rel="noopener noreferrer">
+          WhatsApp 11 2831-9760
+        </a>
+      </div>
+    </div>
+  </section>
+  
   <!-- SECCIÓN: NUESTRO EQUIPO -->
   <section id="team">
     <h2 class="section-title reveal">Nuestro Equipo</h2>
